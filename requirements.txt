@@ -4,5 +4,6 @@ streamlit
 matplotlib
 seaborn
 it
+pybase64
 
 
