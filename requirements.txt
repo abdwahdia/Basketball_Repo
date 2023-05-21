@@ -1,4 +1,6 @@
 numpy
+bs4
+requests
 scipy
 matplotlib
 pandas
