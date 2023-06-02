@@ -26,7 +26,7 @@ selected_mul_page = st.sidebar.selectbox('Multiple Pages', list([int(p) for p in
 def load_data(page, type_of_vehicle):
     Url = "https://www.expat-dakar.com/voitures/dakar?condition="+str(type_of_vehicle)+"&page="+str(page) 
     res = get(Url)
-    soup = BeautifulSoup(res.text, html.parser)
+    soup = BeautifulSoup(res.text, 'html.parser')
     conteneurs = soup.find_all('div', class_ ='listings-cards__list-item')
     data = []
     for conteneur in conteneurs : 
@@ -58,7 +58,7 @@ def load_data1(mul_page, type_of_vehicle):
     for p in range(1, int(mul_page)):
         Url = f"https://www.expat-dakar.com/voitures/dakar?condition={type_of_vehicle}&page={p}" 
         res = get(Url)
-        soup = BeautifulSoup(res.text, html.parser)
+        soup = BeautifulSoup(res.text, 'html.parser')
         conteneurs = soup.find_all('div', class_ ='listings-cards__list-item')
         data = []
         for conteneur in conteneurs : 
